@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Ejercicio2_2.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor=" #840c44 ">
+
+                <Frame HeightRequest="40" BackgroundColor=" #fc5434 ">
+                    <Label Margin="0,5,0,0" Text="Tarea2.2 Maissa Sarmiento"   TextColor="White" FontSize="19" HorizontalTextAlignment="Center"/>
+                </Frame>
+
+                <Entry x:Name="txtname" Margin="15,30,15,0" 
+                   PlaceholderColor="White" Keyboard="Text" Placeholder="Nombre de la Firma"/>
+              
+                <Entry x:Name="txtdesc" Margin="15,0,15,15"  
+                   PlaceholderColor="White" Keyboard="Text"  Placeholder="Descripción de la Firma"/>
+
+
+
+                <forms:SignaturePadView x:Name="firmita" Margin="5,0,5,0" BackgroundColor=" #fcc404 "
+                            StrokeWidth="1" 
+                            HeightRequest="300" CaptionText="INTRODUZCA SU FIRMA AQUI"/>
+
+                <Grid RowSpacing="0"
+                  ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="200" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button BackgroundColor=" #fc5434" x:Name="btnLista" FontSize="Body" Text="Listado Firmas" 
+                            Grid.Row="0" Grid.Column="1" Clicked="btnLista_Clicked" CornerRadius="15" Margin="10"/>
+                    <Button BackgroundColor=" #fc5434" x:Name="btnSave" FontSize="Body" TextColor="White"
+                            Grid.Row="0" Grid.Column="0" Text="Guardar Firma" Clicked="btnSave_Clicked" CornerRadius="15" Margin="10"/>
+                    
+                </Grid>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
